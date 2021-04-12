@@ -10,5 +10,6 @@ public class Hello {
 	      System.out.println("비가 오네요");
 	      System.out.println("오늘은");
 	      System.out.println("월요일입니다.");
+	      System.out.println("github 연결");
 	}
 }
