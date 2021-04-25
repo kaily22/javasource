@@ -1,39 +1,27 @@
-package jdbc;
+package emp;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import static emp.JdbcUtil.*;
 
 public class EmpDAO {
-	private Connection con;
-	private PreparedStatement pstmt;
-	private ResultSet rs;
 	
-	public Connection getConnection() {
-		try {
-			Class.forName("oracle.jdbc.OracleDriver");
-			
-			String url = "jdbc:oracle:thin:@localhost:1521:xe";
-			String user = "scott";
-			String password = "TIGER";
-			
-			con = DriverManager.getConnection(url, user, password);
-			
-		} catch (ClassNotFoundException e) {			
-			e.printStackTrace();
-		} catch (SQLException e) {			
-			e.printStackTrace();
-		}
-		
-		return con;
+	private Connection con;
+	
+	
+	public EmpDAO(Connection con) {
+		this.con = con;
 	}
 	
+	
 	public List<EmpVO> select() {
-		con = getConnection();		
+		
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
 		String sql = "select * from emp_temp";
 		
 		//ArrayList 객체 생성
@@ -59,22 +47,19 @@ public class EmpDAO {
 		} catch (SQLException e) {			
 			e.printStackTrace();
 		} finally{
-			try {
-				rs.close();
-				pstmt.close();
-				con.close();
-			} catch (Exception e2) {
-				e2.printStackTrace();
-			}
+			close(rs);
+			close(pstmt);
 		}	
 		return list;
 	}//select end
 	
 	public EmpVO selectOne(int empno) {
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
 		String sql = "select * from emp_temp where empno=?";
 		EmpVO vo=null;
 		try {
-			con = getConnection();
+			
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, empno); //? 세팅 => (숫자 : 물음표 순서)
 			rs = pstmt.executeQuery();
@@ -94,13 +79,8 @@ public class EmpDAO {
 		} catch (SQLException e) {			
 			e.printStackTrace();
 		} finally{
-			try {
-				rs.close();
-				pstmt.close();
-				con.close();
-			} catch (Exception e2) {
-				e2.printStackTrace();
-			}
+			close(rs);
+			close(pstmt);
 		}
 		return vo;		
 	}//selectOne end
@@ -135,9 +115,12 @@ public class EmpDAO {
 	
 	
 	public int insert(EmpVO vo) {
+		
+		PreparedStatement pstmt = null;
+		
 		int result=0;
 		try {
-			con = getConnection();
+			
 			String sql="insert into emp_temp(empno,ename,job,mgr,hiredate,sal,comm,deptno)";
 			sql+="values(?,?,?,?,sysdate,?,?,?)";
 			pstmt = con.prepareStatement(sql);
@@ -151,13 +134,8 @@ public class EmpDAO {
 			result = pstmt.executeUpdate();			
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			try {
-				pstmt.close();
-				con.close();
-			} catch (Exception e2) {
-				e2.printStackTrace();
-			}
+		} finally {			
+			close(pstmt);
 		}
 		return result;
 	}//insert end
@@ -166,10 +144,11 @@ public class EmpDAO {
 	
 	
 	public int update(int comm,int empno) {
+		PreparedStatement pstmt = null;
 		String sql="update emp_temp set comm=? where empno=?";
 		int result=0;
 		try {
-			con = getConnection();
+			
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, comm);
 			pstmt.setInt(2, empno);
@@ -177,24 +156,19 @@ public class EmpDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			try {
-				pstmt.close();
-				con.close();
-			} catch (Exception e2) {
-				e2.printStackTrace();
-			}
+			close(pstmt);
 		}			
 		return result;
 	}// update end
 	
 	
 	public int delete(int empno,String ename) {
+		PreparedStatement pstmt = null;
 		String sql="delete from emp_temp where empno=? and ename=?";
 		int result=0;
 		
-		try {
+		try {	
 			
-			con = getConnection();
 			pstmt=con.prepareStatement(sql);
 			pstmt.setInt(1, empno);
 			pstmt.setString(2, ename);
@@ -203,12 +177,7 @@ public class EmpDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			try {
-				pstmt.close();
-				con.close();
-			} catch (Exception e2) {
-				e2.printStackTrace();
-			}
+			close(pstmt);
 		}
 		return result;
 	}
