@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="emp2.EmpDAO" project="basic2" file="/basic2/src/emp2/EmpDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="196" width="157" x="157" y="-72"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="emp2.EmpUpdateAction" project="basic2" 
+    file="/basic2/src/emp2/EmpUpdateAction.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="106" width="154" x="1004" y="-72"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="emp2.EmpSelectAction" project="basic2" 
+    file="/basic2/src/emp2/EmpSelectAction.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="106" width="154" x="1198" y="-72"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="emp2.JdbcUtil" project="basic2" file="/basic2/src/emp2/JdbcUtil.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="196" width="203" x="354" y="-72"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="emp2.EmpMain" project="basic2" file="/basic2/src/emp2/EmpMain.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="106" width="130" x="597" y="-72"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="emp2.EmpRemoveAction" project="basic2" 
+    file="/basic2/src/emp2/EmpRemoveAction.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="106" width="158" x="1392" y="-72"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="emp2.EmpDeleteService" project="basic2" 
+    file="/basic2/src/emp2/EmpDeleteService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="106" width="197" x="767" y="-72"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="emp2.EmpListAction" project="basic2" file="/basic2/src/emp2/EmpListAction.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="106" width="154" x="1590" y="-72"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="emp2.EmpSelectOne" project="basic2" file="/basic2/src/emp2/EmpSelectOne.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="106" width="143" x="1978" y="-72"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="emp2.EmpAddAction" project="basic2" file="/basic2/src/emp2/EmpAddAction.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="106" width="154" x="1784" y="-72"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="emp2.EmpSelectService" project="basic2" 
+    file="/basic2/src/emp2/EmpSelectService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="106" width="187" x="2161" y="-72"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="emp2.ConsoleUtil" project="basic2" file="/basic2/src/emp2/ConsoleUtil.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="340" width="256" x="2388" y="-72"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="emp2.EmpUpdateService" project="basic2" 
+    file="/basic2/src/emp2/EmpUpdateService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="106" width="181" x="2684" y="-72"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="14" language="java" name="emp2.Action" project="basic2" file="/basic2/src/emp2/Action.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="88" width="154" x="1392" y="524"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="15" language="java" name="emp2.EmpInsertService" project="basic2" 
+    file="/basic2/src/emp2/EmpInsertService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="106" width="186" x="2905" y="-72"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="emp2.EmpVO" project="basic2" file="/basic2/src/emp2/EmpVO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="556" width="273" x="3131" y="-72"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <realization id="17">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <realization id="18">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <realization id="19">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <realization id="20">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <realization id="21">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
