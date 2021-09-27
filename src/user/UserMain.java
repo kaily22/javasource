@@ -65,7 +65,15 @@ public class UserMain {
 
 				break;
 			case 4:
-
+				System.out.println("수정하고 싶은 사원 번호 입력: ");
+				no = Integer.parseInt(sc.nextLine());
+				System.out.println("수정할 전화번호 입력 : ");
+				mobile = sc.nextLine();
+				System.out.println("수정할 주소 입력 : ");
+				addr = sc.nextLine();
+				UserUpdateService updateservice = new UserUpdateService();
+				boolean isUpdate = updateservice.UserUpdate(mobile, addr, no);
+				System.out.println(isUpdate ? "수정 성공 " : "수정 실패");
 				break;
 			case 5:
 				System.out.println("삭제할 사원번호 입력 : ");

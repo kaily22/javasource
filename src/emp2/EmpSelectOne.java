@@ -15,5 +15,16 @@ public class EmpSelectOne {
 		close(con);
 		return vo;
 	}
+	
+	public EmpVO getEmp(String ename) {
+
+		Connection con = getConnection();
+		EmpDAO dao = new EmpDAO(con);
+
+		EmpVO vo = dao.selectOne(ename);
+		close(con);
+		return vo;
+	}
+	
 
 }

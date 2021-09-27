@@ -12,6 +12,12 @@ public class ConsoleUtil {
 		return empno;
 	}
 
+	public String getEmpName(Scanner sc) {
+		System.out.print("사원이름를 입력하세요 : ");
+		String empname = sc.nextLine();
+		return empname;
+	}
+	
 	public void printEmp(EmpVO vo) {
 		System.out.println("empno : " + vo.getEmpno());
 		System.out.println("ename : " + vo.getEname());

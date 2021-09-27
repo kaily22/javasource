@@ -92,7 +92,7 @@ public class UserDAO {
 	public int update(String mobile, String addr, int no) {
 		PreparedStatement pstmt = null;
 		UserVO vo = new UserVO();
-		String sql = "update userTBL set mobile = ?, addr = ?, where no =?";
+		String sql = "update userTBL set mobile =?, addr =?, where no =?";
 		int result = 0;
 		try {
 			pstmt = con.prepareStatement(sql);

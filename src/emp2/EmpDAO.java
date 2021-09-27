@@ -57,11 +57,47 @@ public class EmpDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		String sql = "select * from emp_temp where empno=?";
+		//String sql ="select * from emp_temp where ename like '%?%'";
 		EmpVO vo=null;
 		try {
 			
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, empno); //? 세팅 => (숫자 : 물음표 순서)
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				vo = new EmpVO();
+				vo.setEmpno(rs.getInt("empno"));
+				vo.setEname(rs.getString("ename"));
+				vo.setJob(rs.getString("job"));
+				vo.setMgr(rs.getInt("mgr"));
+				vo.setHiredate(rs.getDate("hiredate"));
+				vo.setSal(rs.getInt("sal"));
+				vo.setComm(rs.getInt("comm"));
+				vo.setDeptno(rs.getInt("deptno"));				
+			}
+			
+		} catch (SQLException e) {			
+			e.printStackTrace();
+		} finally{
+			close(rs);
+			close(pstmt);
+		}
+		return vo;		
+	}//selectOne end
+	
+	public EmpVO selectOne(String ename) {
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		//String sql = "select * from emp_temp where empno=?";
+		String sql ="select * from emp_temp where ename like ?";
+		
+		EmpVO vo=null;
+		try {
+			
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, "%"+ename+"%"); //? 세팅 => (숫자 : 물음표 순서)
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {

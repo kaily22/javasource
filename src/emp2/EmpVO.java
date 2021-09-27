@@ -15,7 +15,7 @@ public class EmpVO {
 	
 	public EmpVO() {
 	super();
-	}
+	}
 
 	public EmpVO(int empno, String ename, String job, int mgr, Date hiredate, int sal, int comm, int deptno) {
 	    this.empno = empno;

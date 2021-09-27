@@ -43,6 +43,7 @@ public class DeptMain {
 				break;
 
 			case 3:
+			
 				System.out.println("\n부서정보 입력: ");
 				System.out.print("부서번호 >> ");
 				deptno = Integer.parseInt(sc.nextLine()); // 90
@@ -51,19 +52,13 @@ public class DeptMain {
 				System.out.print("부서위치 >> ");
 				String loc = sc.nextLine(); 
 				
-			
-//			if(updateservice.(deptno, dname, loc)) {
-//			 System.out.println("입력 성공");
-//			}else {
-//			 System.out.println("입력 실패");
-//			}
-
 				DeptVO vo1 = new DeptVO();
 				vo1.setDeptno(deptno);
 				vo1.setDname(dname);
 				vo1.setLoc(loc);
-
-//				System.out.println(dao.insert(vo1) ? "입력 성공" : "입력 실패");
+				 
+				DeptInsertService insertservice = new DeptInsertService();
+				System.out.println(insertservice.deptInsert(vo1)? "입력 성공" : "입력 실패");
 
 				break;
 
